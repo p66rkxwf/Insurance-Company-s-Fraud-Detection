@@ -30,7 +30,7 @@ from sklearn.metrics import (
 )
 
 # ===  載入資料與分離特徵與目標欄位 ===
-df = pd.read_csv('kaggle data拷貝/train_2025.csv')
+df = pd.read_csv('raw_data/train_2025.csv')
 
 
 X = df.drop(columns=['claim_number', 'fraud'])  # 移除 ID 與目標欄位
@@ -45,13 +45,14 @@ X_valid, X_test, y_valid, y_test = train_test_split(
 )
 
 # === 輸出訓練集、驗證集、測試集 ===
-X_train.to_csv('kaggle data拷貝/split/X_train.csv')
-y_train.to_csv('kaggle data拷貝/split/y_train.csv')
-X_valid.to_csv('kaggle data拷貝/split/X_valid.csv')
-y_valid.to_csv('kaggle data拷貝/split/y_valid.csv')
-X_test.to_csv('kaggle data拷貝/split/X_test.csv')
-y_test.to_csv('kaggle data拷貝/split/y_test.csv')
+X_train.to_csv('processed_data/train/X_train.csv', index=False)
+y_train.to_csv('processed_data/train/y_train.csv', index=False)
 
+X_valid.to_csv('processed_data/valid/X_valid.csv', index=False)
+y_valid.to_csv('processed_data/valid/y_valid.csv', index=False)
+
+X_test.to_csv('processed_data/test/X_test.csv', index=False)
+y_test.to_csv('processed_data/test/y_test.csv', index=False)
 
 # 特徵工程
 # ===  在測試集移除 zip_code 開頭為 0 的資料 ===
