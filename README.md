@@ -16,7 +16,7 @@
 | `logit_model.py` | 使用邏輯斯迴歸進行模型訓練與評估 |
 | `rf_gridsearch.py` | 使用 GridSearchCV 對 Random Forest 進行超參數搜尋 |
 | `rf_halving_basic.py` | 使用 Halving 技術加速 RF 搜尋（基本特徵） |
-| `rf_halving_feature.py` | 使用 Halving 技術加上衍生特徵（例如：claim/income） |
+| `rf_halving_feature.py` | 使用 Halving 技術加上衍生特徵 |
 
 ---
 
