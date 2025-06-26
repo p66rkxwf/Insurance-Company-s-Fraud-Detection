@@ -29,7 +29,7 @@ from imblearn.over_sampling import SMOTENC
 from category_encoders import TargetEncoder
 
 
-df = pd.read_csv('kaggle data拷貝/train_2025.csv')
+df = pd.read_csv('raw_data/train_2025.csv')
 
 X = df.drop(columns=['claim_number', 'fraud'])  # 移除 ID 與目標欄位
 y = df['fraud']
